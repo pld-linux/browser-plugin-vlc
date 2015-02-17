@@ -1,13 +1,13 @@
-%define	snap	20131028
 Summary:	NPAPI plugin for libvlc
 Summary(pl.UTF-8):	Wtyczka NPAPI do libvlc
 Name:		browser-plugin-vlc
-Version:	2.1.0
-Release:	0.%{snap}.1
+Version:	2.1.3
+Release:	1
 License:	GPL v2+
 Group:		Applications/Networking
-Source0:	npapi-vlc-%{snap}.tar.bz2
-# Source0-md5:	beb2922f9c18b5f531f26cfb441741f0
+#Source0:	http://download.videolan.org/pub/videolan/vlc-webplugins/%{version}/npapi-vlc-%{version}.tar.xz
+Source0:	npapi-vlc-%{version}.tar.xz
+# Source0-md5:	f43be0bb87fa2f5d1e48a8840e6afba0
 URL:		http://git.videolan.org/?p=npapi-vlc.git;a=summary
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -16,9 +16,11 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:2
 BuildRequires:	libxcb-devel
 BuildRequires:	pkgconfig
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	vlc-devel >= 2.1.0
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xulrunner-devel >= 1.9.2
+BuildRequires:	xz
 Requires:	browser-plugins >= 2.0
 Requires:	browser-plugins(%{_target_base_arch})
 Obsoletes:	npapi-vlc
@@ -31,7 +33,7 @@ NPAPI plugin for libvlc.
 Wtyczka NPAPI do libvlc.
 
 %prep
-%setup -q -n npapi-vlc
+%setup -q -n npapi-vlc-%{version}
 
 %build
 %{__libtoolize}
