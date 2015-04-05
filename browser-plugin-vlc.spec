@@ -1,13 +1,12 @@
 Summary:	NPAPI plugin for libvlc
 Summary(pl.UTF-8):	Wtyczka NPAPI do libvlc
 Name:		browser-plugin-vlc
-Version:	2.1.3
+Version:	2.2.0
 Release:	1
 License:	GPL v2+
 Group:		Applications/Networking
-#Source0:	http://download.videolan.org/pub/videolan/vlc-webplugins/%{version}/npapi-vlc-%{version}.tar.xz
-Source0:	npapi-vlc-%{version}.tar.xz
-# Source0-md5:	f43be0bb87fa2f5d1e48a8840e6afba0
+Source0:	http://download.videolan.org/pub/videolan/vlc-webplugins/%{version}/npapi-vlc-%{version}.tar.xz
+# Source0-md5:	e8f96d0737cf817e657405230394c20f
 URL:		http://git.videolan.org/?p=npapi-vlc.git;a=summary
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
